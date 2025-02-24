@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Brown | Hard Science Fiction Books for 8-15 Year Olds | 5D Press</title>
+  <meta name="description" content="Discover mind-bending science books for middle schoolers by Dr. Brown. Educational sci-fi adventures teaching quantum physics, dimensions, and STEM concepts through storytelling.">
+  <meta name="keywords" content="hard science fiction, children's sci-fi, middle grade science fiction, 5D fiction, science books for kids, Dr. Brown books, quantum fiction, educational science fiction, dimensional sci-fi, STEM fiction, science fiction books for 8-15 year olds">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Educational Sci-Fi About Quantum Physics for Kids | Dr. Brown Books">
+  <meta property="og:description" content="Mind-bending adventure stories about scientific discoveries for young readers aged 8-15. Books that teach science through storytelling.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.the5dpress.com">
+  
+  <!-- Schema Markup for Author -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dr. Brown",
+      "jobTitle": "Author of Educational Science Fiction",
+      "description": "Author of hard science fiction books for 8-15 year olds, specializing in multidimensional adventure books for children",
+      "url": "https://www.the5dpress.com",
+      "sameAs": [
+      ]
+    }
+  </script>
+  
+  <!-- Schema Markup for Books -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "Quantum Explorers",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Brown"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "5D Press"
+      },
+      "genre": "Children's Hard Science Fiction",
+      "audience": "Children ages 8-15",
+      "description": "Join Ellie and Leo as they discover a device that allows them to shrink to quantum size and explore the fascinating world of subatomic particles.",
+      "inLanguage": "en-US"
+    }
+  </script>
+  
+  <style>
+    :root {
+      --primary: #3a86ff;
+      --secondary: #8338ec;
+      --accent: #ff006e;
+      --light: #f8f9fa;
+      --dark: #212529;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      /* Slightly smoother transitions on elements */
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    }
+    
+    body {
+      background-color: var(--light);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+    
+    /* The fixed star background container */
+    .stars {
+      position: fixed;
+      top: -10%;
+      left: -10%;
+      width: 120%;
+      height: 120%;
+      z-index: -1;
+      background: linear-gradient(to bottom, #000428, #004e92);
+      overflow: hidden;
+      /* For subtle parallax transitions */
+      transition: transform 0.1s ease-out;
+    }
+    
+    /* Star Connection Canvas behind content as well */
+    .star-connections {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    @keyframes twinkle {
+      0% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0.3; transform: scale(0.8); }
+    }
+    
+    .star {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.7);
+      transition: transform 0.2s ease;
+    }
+    
+    /* Enhance star effect on hover */
+    .star:hover {
+      transform: scale(1.5);
+      z-index: 1;
+      box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.9);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    header {
+      padding: 40px 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo span {
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      padding-left: 5px;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      padding: 5px 0;
+    }
+    
+    nav a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+    
+    nav a:hover:after {
+      width: 100%;
+    }
+    
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 0;
+      color: white;
+    }
+    
+    .hero-content {
+      max-width: 600px;
+      /* add subtle parallax transition (we'll shift it slightly on mouse) */
+      transition: transform 0.2s ease-out;
+    }
+    
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 20px rgba(131, 56, 236, 0.3);
+    }
+    
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(131, 56, 236, 0.5);
+    }
+    
+    .book-cover {
+      position: relative;
+      perspective: 1000px;
+      /* subtle parallax if desired */
+      transition: transform 0.2s ease-out;
+    }
+    
+    .book {
+      width: 250px;
+      height: 350px;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateY(-30deg);
+      transition: transform 1s ease;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    .book:hover {
+      transform: rotateY(0);
+    }
+    
+    .book-front {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background: linear-gradient(45deg, #2b5876, #4e4376);
+      background-image: url(images/cover-image.png);
+      background-size: cover;
+      background-position: center;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      color: white;
+    }
+    
+    .book-spine {
+      position: absolute;
+      width: 30px;
+      height: 100%;
+      transform: rotateY(90deg) translateZ(-15px) translateX(-15px);
+      background: linear-gradient(to right, #141e30, #243b55);
+    }
+    
+    .about {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 80px 40px;
+      border-radius: 20px;
+      margin-bottom: 80px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .about h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: white;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .about h2:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100px;
+      height: 3px;
+      background: var(--accent);
+    }
+    
+    .about-content {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+    
+    .author-img {
+      width: 220px;
+      height: 220px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .about-text {
+      flex: 1;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .about-text p {
+      margin-bottom: 20px;
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+    
+    .books {
+      padding: 60px 0;
+    }
+    
+    .books h2 {
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      text-align: center;
+      color: white;
+    }
+    
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 40px;
+    }
+    
+    .book-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .book-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+    
+    .book-card-img {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
+    
+    .book-card-content {
+      padding: 20px;
+      color: white;
+    }
+    
+    .book-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    
+    .book-card p {
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .book-btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      color: white;
+      text-decoration: none;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    
+    footer {
+      padding: 40px 0;
+      margin-top: auto;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    
+    .social-link {
+      color: white;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+    
+    .social-link:hover {
+      color: var(--accent);
+    }
+    
+    .testimonials {
+      padding: 60px 0;
+      color: white;
+    }
+    
+    .testimonials h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    
+    .testimonial-author {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+    }
+    
+    .blog-preview {
+      margin-top: 80px;
+      padding: 60px 0;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 20px;
+    }
+    
+    .blog-preview h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      text-align: center;
+      color: white;
+    }
+    
+    .blog-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .blog-content {
+      padding: 25px;
+      color: white;
+    }
+    
+    .blog-title {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+    
+    .blog-excerpt {
+      margin-bottom: 20px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .blog-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .faq-section {
+      margin: 80px 0;
+      color: white;
+    }
+    
+    .faq-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    
+    .faq-item {
+      margin-bottom: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .faq-question {
+      padding: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+    }
+    
+    .faq-answer {
+      padding: 0 20px 20px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+      }
+      
+      .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .about h2:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      nav ul {
+        gap: 15px;
+      }
+      
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 100; /* Above other elements */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background */
+}
+
+/* Updated modal box styling */
+.modal-content {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  margin: 10% auto; /* Centered vertically with some top margin */
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 50%;  /* Approximately half the screen's width */
+  height: 50%; /* Approximately half the screen's height */
+  overflow: auto; /* Allow scrolling if content overflows */
+  border-radius: 15px;
+  position: relative;
+  color: white;  /* Text in white for contrast */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Updated close button styling */
+.modal-content .close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-content .close:hover,
+.modal-content .close:focus {
+  color: var(--accent);
+}
+
+/* Change blog card to show hand cursor on hover */
+.blog-card {
+  cursor: pointer;
+}
+  </style>
+</head>
+<body>
+  <!-- Starry background -->
+  <div class="stars" id="stars"></div>
+  <!-- Canvas for connecting lines between stars and mouse -->
+  <canvas class="star-connections" id="star-connections"></canvas>
+  
+  <div class="container">
+    <header>
+      <a href="#" class="logo">The <span>5D </span>  Press</a>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <!--
+          <li><a href="#books">Books</a></li>
+          <-->
+          <li><a href="#blog">Behind The Scenes</a></li>
+          <!--
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <-->
+        </ul>
+      </nav>
+    </header>
+    
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Explore Science Through Fiction</h1>
+        <p>Welcome to the world of Dr. Brown's hard science fiction. Where curious young minds discover the wonders of science through exciting adventures across dimensions.</p>
+        <a href="#books" class="btn">Discover Multidimensional Adventures</a>
+      </div>
+      
+      <div class="book-cover">
+        <div class="book">
+          <div class="book-front">
+            <div class="book-title" style="text-align: center; font-size: 24px; font-weight: bold;">
+              Cardboard Box Wildfire
+            </div>
+            <div style="text-align: center; font-size: 18px;">Dr. Brown</div>
+            <div style="text-align: center; font-size: 14px;">5D Fiction | Science Adventure</div>
+          </div>
+          <div class="book-spine"></div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="about" id="about">
+      <h2>About The Author</h2>
+      <div class="about-content">
+        <img src="images/author.webp" alt="Dr. Brown, author of science fiction books for middle grade readers" class="author-img">
+        <div class="about-text">
+          <p>Dr. Brown is the Cofounder and CTO of a cutting-edge AI startup. With a strong focus on innovation, he oversees a team of engineers and product experts dedicated to creating efficient AI solutions to help the most valuable brands in the world.</p>
+
+          <p>Outside of work, Brown has a deep appreciation for the natural world, particularly ocean and space explorations. As a dedicated family man, he enjoys supporting his child’s learning adventures. In his downtime, he’s a fan of Transformers, particularly the noble Optimus Prime, and never misses an opportunity to indulge in his favorite snack—cakes.</p>
+
+          <p>Blending a passion for technology, family, and nature, Dr. Brown brings a unique perspective to his work and life.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- <section class="books" id="books">
+      <h2>Multidimensional Adventure Books for Children</h2>
+      <div class="book-grid">
+        <div class="book-card">
+          <img src="/api/placeholder/400/600" alt="Quantum Explorers - science fiction with child protagonist" class="book-card-img">
+          <div class="book-card-content">
+            <h3>Quantum Explorers: The Subatomic Adventure</h3>
+            <p>Join Ellie and Leo as they discover a device that allows them to shrink to quantum size and explore the fascinating world of subatomic particles. Perfect for kids who love mind-bending reality books with scientific accuracy.</p>
+            <a href="#" class="book-btn">Explore Quantum Physics for Kids</a>
+          </div>
+        </div>
+        
+        <div class="book-card">
+          <img src="/api/placeholder/400/600" alt="Solar System Seekers - family science adventure book" class="book-card-img">
+          <div class="book-card-content">
+            <h3>Solar System Seekers: The Interplanetary Challenge</h3>
+            <p>When the Interplanetary Science Fair approaches, three friends build a spacecraft that accidentally takes them on a tour of our solar system. A thrilling educational sci-fi about collaborative problem-solving for elementary students.</p>
+            <a href="#" class="book-btn">Join the Space Adventure</a>
+          </div>
+        </div>
+        
+        <div class="book-card">
+          <img src="/api/placeholder/400/600" alt="Gravity Games - books about kids saving the world with science" class="book-card-img">
+          <div class="book-card-content">
+            <h3>Gravity Games: The 5D Challenge</h3>
+            <p>A mysterious competition invites young scientists to an orbital space station where they must solve puzzles using the principles of physics. Features Robin's cardboard box adventure and strange 5D particles that bend reality.</p>
+            <a href="#" class="book-btn">Discover Dimensional Travel</a>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    
+    <!-- <section class="testimonials">
+      <h2>What Young Scientists Are Saying</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Dr. Brown's books made quantum physics fun! I never thought science could be so exciting. Now I want to be a physicist when I grow up."</p>
+          <div class="testimonial-author">- Maya, age 12, Young Science Club</div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"The 5D particle adventures are my favorite! I love how the kids in the story use real science to solve problems. It's like learning without feeling like homework."</p>
+          <div class="testimonial-author">- James, age 10, STEM Student</div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"As a science teacher, I recommend Dr. Brown's books to all my students. They perfectly balance educational content with thrilling storylines about dimensional exploration."</p>
+          <div class="testimonial-author">- Ms. Rodriguez, Middle School Science Teacher</div>
+        </div>
+      </div>
+    </section> -->
+    
+    <section class="blog-preview" id="blog">
+      <h2>Behind The Scenes</h2>
+      <div class="blog-card">
+        <div class="blog-content">
+          <h3 class="blog-title">The Spark of Inspiration</h3>
+          <p class="blog-excerpt">Discover how the story was started. </p>
+          <div class="blog-meta">
+            <span>A conversation in the car with my 7 year old son.</span>
+            <span>January 3, 2025</span>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-content">
+          <h3 class="blog-title">Shaping The Story</h3>
+          <p class="blog-excerpt">Discover how the story was shaped.</p>
+          <div class="blog-meta">
+            <span>Quantum Physics for Kids</span>
+            <span>January 28, 2025</span>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-content">
+          <h3 class="blog-title">Goals and Motivations</h3>
+          <p class="blog-excerpt">Discover why I wanted to write the book.</p>
+          <div class="blog-meta">
+            <span>Extraordinary within the Ordinary</span>
+            <span>February 8, 2025</span>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-content">
+          <h3 class="blog-title">Co-creating with AI</h3>
+          <p class="blog-excerpt">Discover how I worked with AI writing this book.</p>
+          <div class="blog-meta">
+            <span>AI is changing everything</span>
+            <span>February 18, 2025</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- <section class="faq-section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">Are these books suitable for an 8-year-old who loves science?</div>
+        <div class="faq-answer">
+          Absolutely! My books are specifically written for children aged 8-15 who are curious about science. 
+          The stories are engaging and accessible while introducing complex scientific concepts in a way 
+          young readers can understand. For 8-year-olds, I recommend starting with "Quantum Explorers" 
+          which has slightly simpler concepts.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How scientifically accurate are the concepts in your 5D fiction?</div>
+        <div class="faq-answer">
+          As an astrophysicist, I pride myself on maintaining scientific accuracy in all my books. While I take 
+          creative liberties with some theoretical concepts like dimensional travel, all the core physics, 
+          chemistry, and biology principles are accurate. The "5D" elements are based on cutting-edge theoretical 
+          physics presented in an age-appropriate way.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you offer classroom resources for teachers using your books?</div>
+        <div class="faq-answer">
+          Yes! I provide free downloadable classroom guides for educators who want to use my books to teach 
+          science through storytelling. These include discussion questions, hands-on experiments, and curriculum 
+          connections that align with middle school science standards.
+        </div>
+      </div>
+    </section> -->
+    <div id="blogModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <!-- Content will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
+    <footer id="contact">
+      <p>© 2025 The 5D Press. Educational science fiction for curious young minds.</p>
+      <!--
+        <p>Contact: hello@the5dpress.com | Subscribe to our newsletter for new multidimensional adventures</p>
+      -->
+      <!-- <div class="social-links">
+        <a href="#" class="social-link">Twitter</a>
+        <a href="#" class="social-link">Instagram</a>
+        <a href="#" class="social-link">Goodreads</a>
+        <a href="#" class="social-link">Science Blog</a>
+      </div> -->
+    </footer>
+  </div>
+  
+  <script>
+    // -------------------------------------------
+    // 1) PARALLAX BACKGROUND EFFECT
+    // -------------------------------------------
+    const starsContainer = document.getElementById('stars');
+    const starCanvas = document.getElementById('star-connections');
+    const ctx = starCanvas.getContext('2d');
+
+    let mouseX = -9999, mouseY = -9999; // Initially off-screen
+    let offsetX = 0, offsetY = 0;       // Parallax offsets
+    const parallaxFactor = 50;          // Adjust for stronger/weaker parallax
+
+    // Resize our canvas if window size changes
+    function resizeCanvas() {
+      starCanvas.width = window.innerWidth;
+      starCanvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Track mouse for parallax
+    document.addEventListener('mousemove', (e) => {
+      const xRatio = e.clientX / window.innerWidth;
+      const yRatio = e.clientY / window.innerHeight;
+      
+      // Move stars background gently in opposite direction
+      offsetX = (xRatio - 0.5) * parallaxFactor;
+      offsetY = (yRatio - 0.5) * parallaxFactor;
+      starsContainer.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+      
+      // Also track for star connections
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    // -------------------------------------------
+    // 2) STAR CONNECTION EFFECT
+    // -------------------------------------------
+    const numStars = 150;
+    const starData = [];
+
+    // Create stars in random positions (absolute px) & store data for connections
+    function createStars() {
+      for (let i = 0; i < numStars; i++) {
+        const starEl = document.createElement('div');
+        starEl.classList.add('star');
+        
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+        const size = 2 + Math.random() * 4;
+        const animDelay = Math.random() * 5;
+        const opacity = 0.5 + Math.random() * 0.5;
+
+        // Position and style the star element
+        starEl.style.left = `${x}px`;
+        starEl.style.top = `${y}px`;
+        starEl.style.width = `${size}px`;
+        starEl.style.height = `${size}px`;
+        starEl.style.opacity = opacity;
+        starEl.style.animation = `twinkle 5s infinite ${animDelay}s`;
+
+        if (size > 4) {
+          // Extra glow for bigger stars
+          starEl.style.boxShadow = `0 0 ${size*2}px ${size/2}px rgba(255,255,255,${opacity})`;
+        }
+        
+        starsContainer.appendChild(starEl);
+        // Save data for line connections
+        starData.push({ x, y, size });
+      }
+    }
+
+    createStars();
+
+    // We'll draw lines between nearby stars, and from mouse to nearby stars
+    function animate() {
+      requestAnimationFrame(animate);
+      
+      // Clear the entire canvas
+      ctx.clearRect(0, 0, starCanvas.width, starCanvas.height);
+
+      const starStarDistance = 100; // max distance between stars to connect
+      const mouseStarDistance = 150; // max distance from mouse to star
+
+      // 1) Connect star to star
+      for (let i = 0; i < starData.length; i++) {
+        for (let j = i + 1; j < starData.length; j++) {
+          const dx = starData[j].x - starData[i].x;
+          const dy = starData[j].y - starData[i].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < starStarDistance) {
+            // Opacity based on closeness
+            const alpha = 1 - dist / starStarDistance;
+            ctx.strokeStyle = `rgba(255,255,255,${alpha * 0.5})`;
+            ctx.beginPath();
+            ctx.moveTo(starData[i].x, starData[i].y);
+            ctx.lineTo(starData[j].x, starData[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      // 2) Connect mouse to star if close
+      if (mouseX >= 0 && mouseY >= 0) {
+        for (let i = 0; i < starData.length; i++) {
+          const dx = starData[i].x - mouseX;
+          const dy = starData[i].y - mouseY;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < mouseStarDistance) {
+            const alpha = 1 - dist / mouseStarDistance;
+            ctx.strokeStyle = `rgba(255,255,255,${alpha})`;
+            ctx.beginPath();
+            ctx.moveTo(mouseX, mouseY);
+            ctx.lineTo(starData[i].x, starData[i].y);
+            ctx.stroke();
+          }
+        }
+      }
+    }
+    animate();
+
+    // -------------------------------------------
+    // Simple FAQ Toggle
+    // -------------------------------------------
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+      // Hide all FAQ answers initially
+      question.nextElementSibling.style.display = 'none';
+    });
+  </script>
+
+<script>
+  // Get the modal element and its inner content container
+  const modal = document.getElementById("blogModal");
+  const modalBody = modal.querySelector(".modal-body");
+
+  // Select all blog cards
+  const blogCards = document.querySelectorAll(".blog-card");
+
+  // Create a dictionary of blog title and content
+  const blogData = {
+    "The Spark of Inspiration": `<p>One day, my son told me a story. "A big cardboard box contains a smaller box, which contains an even smaller box," he said. "That’s it. Boring!" </p>
+    <br/>
+    <p>But I thought, what if it wasn’t boring? What if the last box led to another, and another… and never stopped? </p>
+    <br/>
+    <p>What if it was an endless adventure?</p>
+    <br/>
+    <p>That’s how the idea for this book began. Suddenly, those simple cardboard boxes became magical—a doorway to infinite possibilities and never-ending surprises. </p>
+    <br/>
+    <p>It made me realize: even the most ordinary things can be extraordinary if you look at them the right way.</p>
+    <br/>
+    <p>So I wrote this book to spark curiosity and inspire you to see the true magic of this world.</p>`,
+    "Shaping The Story": `<p>It all began with a peculiar scene—a series of boxes nesting inside one another. While visually captivating, I knew I needed a deeper, more scientifically grounded explanation to satisfy both my own curiosity and the expectations of a hard science fiction aficionado. </p>
+    <br>
+    <p>As a Computer Science PhD, I couldn’t settle for mere magic; there had to be a rational underpinning. That’s when the concept of dimensions struck me. </p>
+    <br>
+    <p>I realized that higher dimensions could act as invisible architects, orchestrating the placement and behavior of objects in our familiar three-dimensional space. This idea of dimensions manipulating lower-dimensional entities offered the perfect bridge between visual wonder and scientific plausibility. </p>
+    <br>
+    <p>With the notion of dimensions as my foundation, I set out to construct a bold narrative—a 5D adventure. In this realm, time was not the relentless, linear force we experience every day. Instead, it was fixed, static in a way that allowed for the possibility of time travel. I imagined a universe where the three-dimensional world we know could communicate with a higher-dimensional space, opening up a plethora of extraordinary possibilities. </p>
+    <br>
+    <p> Yet, even with this promising framework, I found myself at an impasse. I craved a storyline that had never been told before—a twist so novel that it would unsettle the boundaries between science and imagination. </p>
+    <br>
+    <p> After several days of wrestling with countless ideas, inspiration finally struck in a flash of clarity: what if thoughts in 5D could behave like gravity in 3D? </p>
+    <br>
+    <p> In that moment, I experienced an overwhelming "ah" moment. This breakthrough provided an entirely new way to link the abstract with the tangible, laying the groundwork for multiple narrative threads that explored how mental energies could exert physical influence, much like gravity shapes the cosmos.</p>
+    <br>
+    <p> The creative process wasn’t without its further challenges. Another knotty problem emerged when I contemplated the “5D particle storm”—a chaotic event that threatened to overwhelm both dimensions. The solution required a radical approach: coordinating thoughts on a global scale. How could humanity collectively harness their mental energies to calm the storm? After sketching out various plots and scenarios, I finally settled on the approach detailed in the book. This resolution not only resolved the narrative tension but also underscored the profound interconnectedness of thought and physical reality. </p>
+    <br>
+    <p> In retrospect, the entire journey of shaping this story was an exhilarating blend of rigorous scientific inquiry and unfettered imagination. Every chapter in the book is imbued with unusual, unexpected twists that challenge conventional storytelling while remaining grounded in hard science principles. I find immense satisfaction in knowing that the narrative is not only fun to read but also offers a refreshing perspective on the interplay between dimensions, time, and thought. This adventure into the realms of 5D thinking is more than just a tale—it’s a testament to the power of creativity when it meets scientific rigor. </p>`,
+    "Goals and Motivations": `<p>When I first embarked on the journey of writing this book, there was a singular motivation at heart—something deeply personal.</p> 
+    <br>
+    <p>I wanted to encourage my son to understand the immense power of thought. Thoughts, to me, are the most transformative force in the world. Through this story, I hope he knows that great minds, fueled by strong ideas, have the ability to reshape the very fabric of reality.</p> 
+    <br>
+    <p>Equally important is the idea of focus. I wanted him to grasp that true success comes not just from raw talent, but from dedicating oneself fully to the task at hand. The impact of focusing on what you do cannot be overstated—small efforts can lead to enormous rewards.</p> 
+    <br>
+    <p>Another core message is most often hidden in plain sight—the extraordinary within the ordinary. In my book, the characters embark on one of the most incredible journeys imaginable, yet many of the illustrations are drawn from the simplicity of everyday life: a stroll after dinner, a quiet backyard, a meal around the table, or even the stillness of sleep in an airplane.</p> 
+    <br>
+    <p>This technique serves to convey a feeling I struggle to put into words—there’s beauty and possibility in the simple acts of life that can transform into something fundamental and powerful. It doesn’t take a grand world to have an extraordinary journey; it’s the depth of thought and the commitment to purpose that makes even the most mundane moments splendid.</p>
+    <br>
+     <p>Through this narrative, I want to instill in my son a belief that he can live a life full of wonder, perseverance, and greatness, even within the framework of the commonplace. It is not the scale of the adventure that makes life amazing—it’s the strength of mind, the ability to focus, and the will to pour yourself into what matters.</p> 
+     <br>
+     <p>Finally, my hope is to reach every young reader with this same message. That greatness is within their grasp by way of thoughtful focus, dedication, and an unwavering belief that even in the simplest parts of life, extraordinary things can arise.</p> `,
+    "Co-creating with AI": `<p>The journey of co-creating with AI has been nothing short of transformative.</p>
+    <br> <p>My truly novel storyline sprang from my own imagination, the unique spark that drives this narrative.</p>
+    <br> <p>With my detailed orchestration and precise instructions, the AI filled in the intricate details, enriching the tale beyond my wildest dreams.</p>
+    <br> <p>Because my drawing skills have always lagged behind my vision, I relied on AI to craft vivid illustrations that bring the story to life.</p>
+    <br> <p>This collaboration has opened my eyes to a future where book writing becomes an effortless blend of human creativity and machine precision.</p>
+    <br> <p>I imagine a world where every writer can seamlessly partner with AI, focusing on their core ideas while the technology handles the finer points.</p>
+    <br> <p>In this future, ordinary moments transform into extraordinary journeys, and every page pulses with the synergy of mind and machine.</p>
+    <br> <p>Co-creating with AI is not just about ease—it is a revolution in storytelling, where innovation and imagination merge to redefine what a book can be.</p><br>`
+  };
+
+  blogCards.forEach(card => {
+    card.addEventListener("click", () => {
+      // Retrieve title from the clicked card
+      const title = card.querySelector(".blog-title").innerText;
+
+      // Retrieve content based on the selected title from the dictionary
+      const content = blogData[title];
+
+      // Insert dynamic content into the modal
+      modalBody.innerHTML = `
+        <h2>${title}</h2>
+        <hr><br/>
+        <p>${content}</p>
+      `;
+
+      // Display the modal
+      modal.style.display = "block";
+    });
+  });
+
+  // When the user clicks on the close button, hide the modal
+  modal.querySelector(".close").addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Also hide the modal if the user clicks outside the modal-content area
+  window.addEventListener("click", event => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+</script>
+
+</body>
+</html>
